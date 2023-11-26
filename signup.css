@@ -1,0 +1,69 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-image: url('https://images.unsplash.com/photo-1630586450644-684e310044dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHN1c3RhaW5hYmlsaXR5fGVufDB8fDB8fHww'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(50%);
+}
+
+.content-container {
+    background-color: transparent;
+    max-width: 60%;
+    width: 500px;
+}
+
+.red-rectangle {
+    position: absolute;
+    height: 500px;
+    width: 1000px;
+    bottom:15%;
+    top:15%;
+    right:15%;
+    background-color: #044715; /* Red color */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff; }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+label {
+    flex-basis: 48%;
+}
+
+input, button {
+    flex-basis: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #fff; /* White button */
+    color: #ff0000; /* Red text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #ff0000; /* Red background on hover */
+    color: #fff; /* White text on hover */
+}
