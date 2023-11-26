@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+
+    <h1>Product Details</h1>
+
+    <div id="productDetails">
+        <!-- Product details will be displayed here using JavaScript -->
+    </div>
+
+    <script>
+        // Your JavaScript code goes here
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the productId from the URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('productId');
+
+            // Fetch and display product details based on productId
+            fetchProductDetails(productId);
+        });
+
+        function fetchProductDetails(productId) {
+            // Perform an API call or retrieve product details in any way you prefer
+            // For demonstration purposes, we'll just display a simple message
+            const productDetailsElement = document.getElementById('productDetails');
+            productDetailsElement.innerHTML = `<p>Details for Product ${productId} go here.</p>`;
+        }
+    </script>
+
+</body>
+</html>

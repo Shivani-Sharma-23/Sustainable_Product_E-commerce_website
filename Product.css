@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(4, 51, 6);
+}
+
+#sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color:black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#sidebar img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+#black-bar {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar {
+    flex: 1;
+    display: flex;
+    margin-right: 10px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+
+#search-button {
+    padding: 8px;
+    background-color: beige;
+    color: brown;
+    border: none;
+    cursor: pointer;
+}
+
+#signup-button {
+    padding: 8px;
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    width: 30%; /* Adjust as needed for your layout */
+    margin: 20px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-height: 200px; /* Adjust as needed for your layout */
+    object-fit: cover;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.buy-now-button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-now-button:hover {
+    background-color: #2980b9;
+}

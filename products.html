@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product List</title>
+    <link rel="stylesheet" href="Product.css">
 </head>
 <body>
-    
+    <div id="sidebar">
+        <img src="Logo.png" alt="Logo">
+        <a href="#" class="active" onclick="navigate('Home.html', this)">Home</a>
+        <a href="#" onclick="navigate('about.html', this)">About Us</a>
+        <a href="#" onclick="navigate('products.html', this)">Products</a>
+    </div>
+
+    <div id="content">
+        <div id="black-bar">
+            <div id="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button" onclick="performSearch()">Search</button>
+            </div>
+            <button id="signup-button" onclick="redirectSignup()">Sign Up</button>
+        </div>
+
+
+    <ul>
+        <li>
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <button class="buy-now-button" onclick="redirectToDescription(1)">Buy Now</button>
+        </li>
+        <li>
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <button class="buy-now-button" onclick="redirectToDescription(2)">Buy Now</button>
+        </li>
+        <!-- Add more products as needed -->
+    </ul>
+
+    <script>
+        function redirectToDescription(productId) {
+            window.location.href = `Product_description.html?productId=${productId}`;
+        }
+    </script>
+
 </body>
 </html>
+
