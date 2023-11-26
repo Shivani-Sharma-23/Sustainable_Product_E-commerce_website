@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEco:A Sustainable Shopping Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(2, 61, 2);
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color:black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        #sidebar img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        #sidebar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        #black-bar {
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #search-bar {
+            flex: 1;
+            display: flex;
+            margin-right: 10px;
+        }
+
+        #search-input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+        }
+
+        #search-button {
+            padding: 8px;
+            background-color: beige;
+            color: brown;
+            border: none;
+            cursor: pointer;
+        }
+
+        #signup-button {
+            padding: 8px;
+            background-color: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .product {
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #description {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="sidebar">
+            <img src="Logo.png" alt="Logo">
+            <a href="#" class="active" onclick="navigate('Home.html', this)">Home</a>
+            <a href="#" onclick="navigate('about.html', this)">About Us</a>
+            <a href="#" onclick="navigate('products.html', this)">Products</a>
+            <a href="#" onclick="navigate('sustainability.html', this)">Sustainability</a>
+        </div>
+
+        <div id="content">
+            <div id="black-bar">
+                <div id="search-bar">
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <button id="search-button" onclick="performSearch()">Search</button>
+                </div>
+                <button id="signup-button" onclick="openSignupPage()">Sign Up</button>
+            </div>
+    
+
+        <div id="description">
+            <p>Brief description of your website goes here.</p>
+        </div>
+
+        <hr>
+
+        <div id="product-container">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1.</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2.</p>
+            </div>
+
+            <!-- Repeat similar structure for other products -->
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function navigate(page, element) {
+        // Redirect to the specified page
+        window.location.href = page;
+
+        // Remove the "active" class from all links
+        var links = document.querySelectorAll('#sidebar a');
+        links.forEach(function(link) {
+            link.classList.remove('active');
+        });
+
+        // Set the "active" class on the clicked link
+        element.classList.add('active');
+
+        function performSearch() {
+            // Add your search functionality here
+            alert('Performing search...');
+        }
+
+        function redirectSignup() {
+            // Redirect to the signup page
+            window.location.href = 'signup.html';
+        }
+    }
+</script>
+</html>
