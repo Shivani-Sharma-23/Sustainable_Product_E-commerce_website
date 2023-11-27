@@ -57,8 +57,11 @@ input, button {
 }
 
 button {
-    background-color: #fff; /* White button */
-    color: #ff0000; /* Red text */
+    position :absolute;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(2, 42, 2); /* White button */
+    color: white; /* Red text */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -97,3 +100,4 @@ button:hover {
     padding: 10px;
     font-size: 16px;
 }
+
