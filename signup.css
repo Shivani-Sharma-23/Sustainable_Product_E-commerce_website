@@ -67,3 +67,33 @@ button:hover {
     background-color: #ff0000; /* Red background on hover */
     color: #fff; /* White text on hover */
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for the input box */
+.state-input {
+    padding: 10px;
+    font-size: 16px;
+}

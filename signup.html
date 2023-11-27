@@ -29,37 +29,74 @@
                     </div>
 
                     <div class="form-row">
-                        <label for="address"><Address></Address>:</label>
+                        <label for="phoneno">Phone number:</label>
+                        <input type="text" id="phoneno" name="phoneno" required>
+                        
+                        <label for="gender">Gender:</label>
+                        <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                        </label>
+
+                        <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                        </label>
+
+                        <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="address"><Address></Address>Address:</label>
                         <input type="text" id="address" name="address" required>
                         
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
                     </div>
 
                     <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="pincode">Pincode:</label>
+                        <input type="text" id="pincode" name="pincode" required>
                         
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
+                        <div class="dropdown">
+                            <label for="stateInput">State:</label>
+                            <input type="text" class="state-input" id="stateInput" onclick="showStates()" placeholder="Select a state">
+                            <div class="dropdown-content" id="stateList">
+                                <!-- List of states goes here -->
+                            <a href="#" onclick="selectState('Andhra Pradesh')">Andhra Pradesh</a>
+                            <a href="#" onclick="selectState('Arunachal Pradesh')">Arunachal Pradesh</a>
+                            <a href="#" onclick="selectState('Bihar')">Bihar</a>
+                            <a href="#" onclick="selectState('Chhattisgarh')">Chhattisgarh</a>
+                            <a href="#" onclick="selectState('Goa')">Goa</a>
+                            <a href="#" onclick="selectState('Gujarat')">Gujarat</a>
+                            <a href="#" onclick="selectState('Haryana')">Haryana</a>
+                            <a href="#" onclick="selectState('Himachal Pradesh')">Himachal Pradesh</a>
+                            <a href="#" onclick="selectState('Jharkhand')">Jharkhand</a>
+                            <a href="#" onclick="selectState('Karnataka')">Karnataka</a>
+                            <a href="#" onclick="selectState('Kerala')">Kerala</a>
+                            <a href="#" onclick="selectState('Madhya Pradesh')">Madhya Pradesh</a>
+                            <a href="#" onclick="selectState('Maharashtra')">Maharashtra</a>
+                            <a href="#" onclick="selectState('Manipur')">Manipur</a>
+                            <a href="#" onclick="selectState('Meghalaya')">Meghalaya</a>
+                            <a href="#" onclick="selectState('Mizoram')">Mizoram</a>
+                            <a href="#" onclick="selectState('Nagaland')">Nagaland</a>
+                            <a href="#" onclick="selectState('Odisha')">Odisha</a>
+                            <a href="#" onclick="selectState('Punjab')">Punjab</a>
+                            <a href="#" onclick="selectState('Rajasthan')">Rajasthan</a>
+                            <a href="#" onclick="selectState('Sikkim')">Sikkim</a>
+                            <a href="#" onclick="selectState('Tamil Nadu')">Tamil Nadu</a>
+                            <a href="#" onclick="selectState('Telangana')">Telangana</a>
+                            <a href="#" onclick="selectState('Tripura')">Tripura</a>
+                            <a href="#" onclick="selectState('Uttar Pradesh')">Uttar Pradesh</a>
+                            <a href="#" onclick="selectState('Uttarakhand')">Uttarakhand</a>
+                            <a href="#" onclick="selectState('West Bengal')">West Bengal</a>
+                            </div>
                     </div>
-
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
+    
                     </div>
-
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-
 
                     <div class="form-row">
                         <button type="submit" onclick="redirectToHome()">Sign Up</button>
@@ -79,6 +116,26 @@
         document.getElementById('signupForm').addEventListener('submit', function(event) {
             event.preventDefault();
         });
+
+        function showStates() {
+            var stateList = document.getElementById("stateList");
+            stateList.style.display = "block";
+        }
+
+        function selectState(state) {
+            document.getElementById("stateInput").value = state;
+            document.getElementById("stateList").style.display = "none";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.state-input')) {
+                var stateList = document.getElementById("stateList");
+                if (stateList.style.display === 'block') {
+                    stateList.style.display = 'none';
+                }
+            }
+        }
     </script>
 
 </body>
