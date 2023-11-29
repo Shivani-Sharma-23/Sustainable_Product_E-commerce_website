@@ -1,142 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>GoEco:A Sustainable Shopping Platform</title>
     <link rel="stylesheet" href="signup.css">
-</head>
-<body>
-
-    <div class="background">
-        <div class="content-container">
-            <div class="red-rectangle">
-                <form id="signupForm">
-                    <div class="form-row">
-                        <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                        
-                        <label for="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="phoneno">Phone number:</label>
-                        <input type="text" id="phoneno" name="phoneno" required>
-                        
-                        <label for="gender">Gender:</label>
-                        <label>
-                        <input type="radio" name="gender" value="male">
-                        Male
-                        </label>
-
-                        <label>
-                        <input type="radio" name="gender" value="female">
-                        Female
-                        </label>
-
-                        <label>
-                        <input type="radio" name="gender" value="other">
-                        Other
-                        </label>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="address"><Address></Address>Address:</label>
-                        <input type="text" id="address" name="address" required>
-                        
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="pincode">Pincode:</label>
-                        <input type="text" id="pincode" name="pincode" required>
-                        
-                        <div class="dropdown">
-                            <label for="stateInput">State:</label>
-                            <input type="text" class="state-input" id="stateInput" onclick="showStates()" placeholder="Select a state">
-                            <div class="dropdown-content" id="stateList">
-                                <!-- List of states goes here -->
-                            <a href="#" onclick="selectState('Andhra Pradesh')">Andhra Pradesh</a>
-                            <a href="#" onclick="selectState('Arunachal Pradesh')">Arunachal Pradesh</a>
-                            <a href="#" onclick="selectState('Bihar')">Bihar</a>
-                            <a href="#" onclick="selectState('Chhattisgarh')">Chhattisgarh</a>
-                            <a href="#" onclick="selectState('Goa')">Goa</a>
-                            <a href="#" onclick="selectState('Gujarat')">Gujarat</a>
-                            <a href="#" onclick="selectState('Haryana')">Haryana</a>
-                            <a href="#" onclick="selectState('Himachal Pradesh')">Himachal Pradesh</a>
-                            <a href="#" onclick="selectState('Jharkhand')">Jharkhand</a>
-                            <a href="#" onclick="selectState('Karnataka')">Karnataka</a>
-                            <a href="#" onclick="selectState('Kerala')">Kerala</a>
-                            <a href="#" onclick="selectState('Madhya Pradesh')">Madhya Pradesh</a>
-                            <a href="#" onclick="selectState('Maharashtra')">Maharashtra</a>
-                            <a href="#" onclick="selectState('Manipur')">Manipur</a>
-                            <a href="#" onclick="selectState('Meghalaya')">Meghalaya</a>
-                            <a href="#" onclick="selectState('Mizoram')">Mizoram</a>
-                            <a href="#" onclick="selectState('Nagaland')">Nagaland</a>
-                            <a href="#" onclick="selectState('Odisha')">Odisha</a>
-                            <a href="#" onclick="selectState('Punjab')">Punjab</a>
-                            <a href="#" onclick="selectState('Rajasthan')">Rajasthan</a>
-                            <a href="#" onclick="selectState('Sikkim')">Sikkim</a>
-                            <a href="#" onclick="selectState('Tamil Nadu')">Tamil Nadu</a>
-                            <a href="#" onclick="selectState('Telangana')">Telangana</a>
-                            <a href="#" onclick="selectState('Tripura')">Tripura</a>
-                            <a href="#" onclick="selectState('Uttar Pradesh')">Uttar Pradesh</a>
-                            <a href="#" onclick="selectState('Uttarakhand')">Uttarakhand</a>
-                            <a href="#" onclick="selectState('West Bengal')">West Bengal</a>
-                            </div>
-                    </div>
     
-                    </div>
-
-                    <div class="form-row">
-                        <button type="submit" onclick="redirectToHome()">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+<body>
+    <header class="cd__intro">
+        <h1> Sign Up </h1>
+    </header>
     </div>
+    <form action="form" method="post">
+    <fieldset>
+        <legend><span class="number">1</span>Your basic details</legend>
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="user_name" placeholder="(only first name)">
 
-    <script>
-        function redirectToHome() {
-            // Redirect to Home.html
-            window.location.href = 'Home.html';
-        }
+        <label for="skype_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Surname" >
 
-        // Optional: Prevent form submission for demonstration purposes
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-        });
+        <label for="mail">Email*:</label>
+        <input type="email" id="mail" name="user_email" placeholder="abc@xyz.com" required>
 
-        function showStates() {
-            var stateList = document.getElementById("stateList");
-            stateList.style.display = "block";
-        }
+        <label for="tel">Contact Num:</label>
+        <input type="tel" id="tel" placeholder="Include country code" name="user_num">
 
-        function selectState(state) {
-            document.getElementById("stateInput").value = state;
-            document.getElementById("stateList").style.display = "none";
-        }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.state-input')) {
-                var stateList = document.getElementById("stateList");
-                if (stateList.style.display === 'block') {
-                    stateList.style.display = 'none';
-                }
-            }
-        }
-    </script>
 
+    </fieldset>
+
+    <fieldset>
+        <legend><span class="number">2</span> Residential address</legend>
+        <label for="State">State:</label>
+        <select id="State" name="State" required>
+        <option value="Haryana">Haryana</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttrakhand">Uttrakhand</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Gujarat">Gujarat</option>
+        </select>
+        <label for="appointment_description">Residential address:</label>
+        <textarea id="appointment_description" name="appointment_description"></textarea>
+        <label for="City">City:</label>
+        <input type="text" name="City" value="" required></input>
+        <br>
+        <label for="Pin_code">Pin Code:</label>
+        <input type="text" name="Pin_code" value="" required></input>
+        <br>
+    </fieldset>
+    <button type="submit" onclick="redirectToHome()">Sign up</button>
+    </form>
+</div>
 </body>
+
+<script>
+    function redirectToHome() {
+        window.location.href = "Home.html"
+    }
+</script>
+
 </html>
