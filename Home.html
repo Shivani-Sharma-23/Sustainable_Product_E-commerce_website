@@ -23,89 +23,57 @@
                 </div>
                 <button id="signup-button" onclick="redirectSignup()">Sign Up</button>
             </div>
+            <div id="tagline-bar1">
+                <img src="https://plus.unsplash.com/premium_photo-1661666980358-66c370b29c28?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxzdXN0YWluYWJsZSUyMHByb2R1Y3RzfGVufDB8fDB8fHww" alt="Image 1">
+                <h1>"Shop the Change, <br>Embrace the Eco-Future."</h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="tagline-bar2">
+                <h1>"Elevate Your Style,<br>Elevate the Planet."</h1>
+                <img src="https://images.unsplash.com/photo-1567480503709-66518a660785?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VzdGFpbmFibGUlMjBmYXNoaW9ufGVufDB8fDB8fHww" alt="Image 2">
+            </div>
+        
+            <div id="circle-image">
+                <img src="https://images.unsplash.com/photo-1631050165089-6311e0d6c5f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3VzdGFpbmFibGUlMjBmYXNoaW9ufGVufDB8fDB8fHww" alt="Circle Image">
+                <h1>Discover, Shop, and Support a Greener Planet!</h1>
+            </div>
+        
+            <div id="buy-now">
+                <h2 id="buy-now-button">Buy Now!!!!</h2>
+            </div>
+        
+            <hr>
+        
+
     
-
-        <div id="description">
-            <p>Brief description of your website goes here.</p>
-        </div>
-
-        <hr>
-
-        <div id="product-container">
-            <!-- Product 1 -->
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1591184510248-6be5138855a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk0fHxzdXN0YWluYWJpbGl0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-            </div></div>
-
-            <div id="product-container">
-            <!-- Product 2 -->
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1567480503709-66518a660785?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VzdGFpbmFibGUlMjBmYXNoaW9ufGVufDB8fDB8fHww" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-            </div></div>
-
-        <div id="product-container">
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VzdGFpbmFibGUlMjBmYXNoaW9ufGVufDB8fDB8fHww" alt="Product 3">
-            <h3>Product 2</h3>
-            <p>Description of Product 2.</p>
-        </div></div>
-
-        <div id="product-container">
-        <!-- Product 4 -->
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1603001088226-17762b4ea534?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1c3RhaW5hYmxlJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Product 4">
-            <h3>Product 2</h3>
-            <p>Description of Product 2.</p>
-        </div></div>
-
-        <div id="product-container">
-        <!-- Product 5 -->
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1592736158789-303583e8db16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHN1c3RhaW5hYmxlJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Product 5">
-            <h3>Product 2</h3>
-            <p>Description of Product 2.</p>
-        </div></div>
-
-        <div id="product-container">
-        <!-- Product 6 -->
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1578747522731-9e5a179b02f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHN1c3RhaW5hYmxlJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Product 6">
-            <h3>Product 2</h3>
-            <p>Description of Product 2.</p>
-        </div></div>
-    </div>
 
 </body>
 
 <script>
     function navigate(page, element) {
-        // Redirect to the specified page
         window.location.href = page;
 
-        // Remove the "active" class from all links
         var links = document.querySelectorAll('#sidebar a');
         links.forEach(function(link) {
             link.classList.remove('active');
         });
-
-        // Set the "active" class on the clicked link
         element.classList.add('active');
 
     }
     function performSearch() {
-            // Add your search functionality here
             alert('Performing search...');
         }
 
         function redirectSignup() {
-        // Redirect to the signup page
         window.location.href = 'signup.html';
     }
+
+    var buyNowButton = document.getElementById('buy-now-button');
+    buyNowButton.addEventListener('click', function() {
+        window.location.href = 'products.html';
+    });
 
 </script>
 </html>

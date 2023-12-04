@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>GoEco:A Sustainable Shopping Platform</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(4, 51, 6);
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        #logo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #logo {
+            width: 300px; /* Adjust as needed */
+            height: 300px; /* Adjust as needed */
+            border-radius: 50%;
+            background-color: #fff; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border: 5px solid #000;
+        }
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #description {
+            text-align: center;
+            margin-top: 20px;
+            color:rgb(38, 80, 79);
+        }
+
+        #contact-bar {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+<h1></h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="navigateTo('home')">Home</a>
+        <a href="#" onclick="navigateTo('about')">About Us</a>
+        <a href="#" onclick="navigateTo('products')">Products</a>
+    </nav>
+
+    <div id="logo-container">
+        <div id="logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <div id="description">
+        <h3>GoEco - A Sustainable Shopping Platform</h3>
+
+            <p>Welcome to GoEco, your premier online marketplace dedicated to sustainable living and responsible consumerism.
+                <br> At GoEco, we believe in the power of conscientious choices, and our platform is designed to make it easy for you to embrace a more sustainable lifestyle.</p>
+            
+            <h3>Mission Statement:</h3>
+            <p>GoEco is committed to promoting sustainability and supporting the United Nations' Sustainable Development Goals (SDGs). 
+                <br>Our mission is to provide a curated selection of eco-friendly, ethical, and socially responsible products that align with various SDG goals, fostering a positive impact on the environment and society.</p>
+    </div>
+
+    <div id="contact-bar">
+        <h4>Contact us:</h4>
+        <p>Email: shivanisharma232005@gmail.com</p>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            switch (page) {
+                case 'home':
+                    window.location.href = 'Home.html';
+                    break;
+                case 'about':
+                    window.location.href = 'About.html';
+                    break;
+                case 'products':
+                    window.location.href = 'products.html';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
 </body>
 </html>
