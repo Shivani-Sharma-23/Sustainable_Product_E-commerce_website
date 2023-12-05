@@ -182,21 +182,17 @@
         }
 
         function navigate(page, element) {
-        // Redirect to the specified page
         window.location.href = page;
 
-        // Remove the "active" class from all links
+
         var links = document.querySelectorAll('#sidebar a');
         links.forEach(function(link) {
             link.classList.remove('active');
         });
-
-        // Set the "active" class on the clicked link
         element.classList.add('active');
 
     }
     function performSearch() {
-            // Add your search functionality here
             alert('Performing search...');
         }
 

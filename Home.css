@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #5f7249; /* Light green color */
+    background-color: #5f7249;
     padding: 30px;
     margin-top: 20px;
     font-size: 40px;
@@ -94,9 +94,8 @@
 
 #tagline-bar2 img {
     margin-left: 100px;
-    width: 500px; /* Adjust as needed */
-    height: 600px; /* Adjust as needed */
-     /* Make the images circular */
+    width: 500px;
+    height: 600px;
 }
 
 #description {
@@ -110,8 +109,8 @@
 }
 
 #circle-image img {
-    width: 500px; /* Adjust as needed */
-    height: 500px; /* Adjust as needed */
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     color:#fff;
 }
