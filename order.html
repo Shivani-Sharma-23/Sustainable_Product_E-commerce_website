@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buy Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #243723;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 400px;
+            height:400px;
+            position: relative;
+            margin:0 auto;
+            margin-top:10%;
+        }
+        
+        form {
+            width: 100%;
+            height: 100%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            width:150px;
+            height:40px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        #confirmation {
+            display: none;
+            color:white;
+        }
+    </style>
+
 </head>
 <body>
+<div id= "container">
+<div id="confirmation" style="display:none;">
+    <h2>Order Confirmed!</h2>
+</div>
+
+<form id="buyNowForm">
+    <label for="quantity"><h3>Quantity:</h3></label>
+    <input type="number" id="quantity" name="quantity" min="1" required>
     
+    <label><h3>Payment Mode:</h3></label>
+    <label><input type="radio" name="paymentMode" value="online" required onclick="handleTransactionFieldDisplay()">Online</label>
+    <label><input type="radio" name="paymentMode" value="offline" required onclick="handleTransactionFieldDisplay()"> Offline</label>
+
+    <div id="transactionIdField" style="display:none;">
+        <label for="transactionId"><h3>Transaction ID:</h3></label>
+        <input type="text" id="transactionId" name="transactionId">
+    </div>
+    
+    <button type="button" onclick="placeOrder()">Place Order</button>
+</form></div>
+
+<script>
+    function placeOrder() {
+        var form = document.getElementById('buyNowForm');
+        var confirmationDiv = document.getElementById('confirmation');
+        if (form.reportValidity()) {
+            form.style.display = 'none';
+            confirmationDiv.style.display = 'block';
+
+            setTimeout(function() {
+                window.location.href = 'products.html';
+            }, 2000);
+        } }
+
+        function handleTransactionFieldDisplay() {
+        var form = document.getElementById('buyNowForm');
+        var transactionIdField = document.getElementById('transactionIdField');
+        var paymentMode = form.querySelector('input[name="paymentMode"]:checked');
+
+        if (paymentMode && paymentMode.value === 'online') {
+            transactionIdField.style.display = 'block';
+        } else {
+            transactionIdField.style.display = 'none';
+        }
+    }
+    
+</script>
+
 </body>
 </html>
