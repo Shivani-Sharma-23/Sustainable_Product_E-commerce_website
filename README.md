@@ -2,7 +2,6 @@
 
 ## Overview
 
-
 Welcome to the Sustainable Product E-commerce Website repository! Our mission is to provide a platform for environmentally-conscious consumers to discover and purchase sustainable products that promote a greener, more sustainable way of living. This project is designed to foster eco-friendly consumption and raise awareness about the importance of sustainable living.
 
 ## Key
